@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+       .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+       .header button {
+            background-color: #555;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+       .book {
+            display: flex;
+            margin: 20px 0;
+        }
+       .book img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+       .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+        form label {
+            margin: 10px 0;
+        }
+        form input, form textarea, form select {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        form button {
+            background-color: #555;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <button>New Arrivals</button>
+            <button>Categories</button>
+            <button>Contact</button>
+        </div>
+        <div>
+            <input type="text" placeholder="Search...">
+            <button>Go</button>
+        </div>
+    </div>
+    <div class="book">
+        <img src="book.jpg" alt="Book">
+        <div>
+            <h2>Title</h2>
+            <p>Author</p>
+            <p>Genre</p>
+            <p>Summary</p>
+        </div>
+    </div>
+    <div class="book">
+        <img src="book.jpg" alt="Book">
+        <div>
+            <h2>Title</h2>
+            <p>Author</p>
+            <p>Genre</p>
+            <p>Summary</p>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2022 Bookstore
+    </div>
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+        </fieldset>
+        <fieldset>
+            <legend>Book Information</legend>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author">
+            <label for="genre">Genre:</label>
+            <input list="genres" id="genre" name="genre">
+            <datalist id="genres">
+                <option value="Fiction">
+                <option value="Non-Fiction">
+                <option value="Science Fiction">
+                <option value="Fantasy">
+                <option value="Mystery">
+                <option value="Romance">
+            </datalist>
+            <label for="summary">Summary:</label>
+            <textarea id="summary" name="summary"></textarea>
+            <label for="cover">Cover:</label>
+            <input type="file" id="cover" name="cover">
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
